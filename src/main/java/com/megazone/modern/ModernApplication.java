@@ -1,11 +1,14 @@
 package com.megazone.modern;
 
+import com.megazone.modern.BehaviorParameterization.BehaviorParameterization;
+import com.megazone.modern.Etc.FindFile;
+import com.megazone.modern.Etc.MeaningOfThis;
+import com.megazone.modern.Lambda.Main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import java.io.File;
-import java.io.FileFilter;
-import java.util.Arrays;
+
 
 @SpringBootApplication
 public class ModernApplication {
@@ -13,18 +16,24 @@ public class ModernApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(ModernApplication.class, args);
 
-		File[] hiddenFiles = new File(".").listFiles(new FileFilter() {
-			public boolean accept(File file) {
-				return file.isHidden();
-			}
-		});
+		// behavior parameterization
+		BehaviorParameterization.filterApples();
 
-		// Method Reference : 이 메서드를 값으로 사용해라.
-		File[] hiddenFiles2 = new File(".").listFiles(File::isHidden);
 
-		System.out.println("hiddenFiles = " + Arrays.toString(hiddenFiles2));
+		// lambda
+		Main.main();
+
+
+		// hidden file
+		FindFile.hiddenFiles();
+
+
+		// 문제
+		MeaningOfThis meaningOfThis = new MeaningOfThis();
+		meaningOfThis.doIt();
+
 	}
 
 
-
 }
+
