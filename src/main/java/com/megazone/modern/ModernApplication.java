@@ -3,6 +3,7 @@ package com.megazone.modern;
 import com.megazone.modern.BehaviorParameterization.BehaviorParameterization;
 import com.megazone.modern.Etc.FindFile;
 import com.megazone.modern.Etc.MeaningOfThis;
+import com.megazone.modern.Generic.GenericUse;
 import com.megazone.modern.Lambda.Main;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -32,6 +33,8 @@ public class ModernApplication {
 		MeaningOfThis meaningOfThis = new MeaningOfThis();
 		meaningOfThis.doIt();
 
+		// Generic
+		GenericUse.use();
 	}
 
 
