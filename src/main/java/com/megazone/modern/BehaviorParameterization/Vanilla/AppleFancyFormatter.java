@@ -1,4 +1,6 @@
-package com.megazone.modern.BehaviorParameterization;
+package com.megazone.modern.BehaviorParameterization.Vanilla;
+
+import com.megazone.modern.BehaviorParameterization.Apple;
 
 public class AppleFancyFormatter implements AppleFormatter {
     @Override
